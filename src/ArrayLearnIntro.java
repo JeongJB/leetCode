@@ -1,4 +1,35 @@
-public class ArrayLearn3 {
+public class ArrayLearnIntro {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int cnt = 0;
+        int cntMax = 0;
+        for (int num : nums) {
+            if (num == 1) {
+                cnt++;
+                if (cnt > cntMax) {
+                    cntMax = cnt;
+                }
+            } else {
+                cnt = 0;
+            }
+        }
+        return cntMax;
+    }
+
+    public int findNumbers(int[] nums) {
+        int cnt = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int num = 0;
+            while (nums[i] > 0) {
+                num++;
+                nums[i] /= 10;
+            }
+            if (num % 2 == 0) {
+                cnt++;
+            }
+        }
+        return cnt;
+    }
+
     public int[] sortedSquares(int[] nums) {
         int ptr = 0;
         int minVal = Integer.MAX_VALUE;
