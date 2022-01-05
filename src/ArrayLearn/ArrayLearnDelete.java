@@ -1,3 +1,5 @@
+package ArrayLearn;
+
 public class ArrayLearnDelete {
     public int removeElement(int[] nums, int val) {
         int ptr = 0;

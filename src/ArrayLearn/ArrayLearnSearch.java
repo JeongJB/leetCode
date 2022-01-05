@@ -1,3 +1,5 @@
+package ArrayLearn;
+
 public class ArrayLearnSearch {
     public boolean checkIfExist(int[] arr) {
         for (int i = 0; i < arr.length; i++) {

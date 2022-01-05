@@ -1,3 +1,5 @@
+package ArrayLearn;
+
 public class ArrayLearnIntro {
     public int findMaxConsecutiveOnes(int[] nums) {
         int cnt = 0;

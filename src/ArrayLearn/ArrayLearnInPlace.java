@@ -1,3 +1,5 @@
+package ArrayLearn;
+
 public class ArrayLearnInPlace {
     public int[] replaceElements(int[] arr) {
         int[] res = new int[arr.length];
@@ -26,5 +28,35 @@ public class ArrayLearnInPlace {
         }
 
         return (nums.length == 0) ? 0 : ptr1;
+    }
+
+    public void moveZeroes(int[] nums) {
+        int ptrWrite = 0;
+
+        for (int ptrRead = 0; ptrRead < nums.length; ptrRead++) {
+            if (nums[ptrRead] != 0) {
+                nums[ptrWrite++] = nums[ptrRead];
+            }
+        }
+
+        for (;ptrWrite < nums.length; ptrWrite++) {
+            nums[ptrWrite] = 0;
+        }
+    }
+
+    public int[] sortArrayByParity(int[] nums) {
+        int[] res = new int[nums.length];
+        int ptrWriteEven = 0;
+        int ptrWriteOdd = nums.length - 1;
+
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                res[ptrWriteEven++] = num;
+            } else {
+                res[ptrWriteOdd--] = num;
+            }
+        }
+
+        return res;
     }
 }
