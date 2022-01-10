@@ -1,13 +1,13 @@
 package LinkedListLearn;
 
+import java.util.ArrayList;
+
 public class LinkedListMain {
     public static void main(String[] args) {
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.addAtHead(1);
-        myLinkedList.addAtTail(3);
-        myLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3
-        myLinkedList.get(1);              // return 2
-        myLinkedList.deleteAtIndex(1);    // now the linked list is 1->3
-        myLinkedList.get(1);              // return 3
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(1);
+        arrayList.add(2);
+
+        System.out.println(arrayList.indexOf(3));
     }
 }
