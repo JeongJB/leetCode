@@ -9,6 +9,7 @@ public class FlattenLinkedList {
 
     public Node flattenRecursive(Node node) {
         if (node == null) return null;
+        // Add comment for test...
 
         while (node.next != null) {
             if (node.child != null) {
